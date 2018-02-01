@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="admin/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="admin/animate.css">
+    <link rel="stylesheet" type="text/css" href="admin/style.css">
+    <meta name="keywords" content="sminocence" />
+</head>
+<body class="gray-bg">
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+    <div>
+        <h3>个人博客登录</h3>
+        <form class="m-t" role="form" action="login.ejs">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="请输入用户名" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="请输入密码" required="">
+            </div>
+
+            <input type="button" id="login" class="btn btn-primary block full-width m-b" value="登录">
+        </form>
+        <p class="m-t"> <small>Copyright &copy; 2017.sminocence All rights reserved.</small> </p>
+    </div>
+</div>
+<script src="admin/jquery-2.1.1.js"></script>
+<script src="admin/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    
+    //用ajax提交表单
+    $('#login').click(function(){
+        $.post("/doLogin",{
+            "username":$("#username").val(),
+            "password":$("#password").val()
+        },function(result){
+            if(result == "1"){
+                alert("注册成功,即将跳转至登录页");
+                window.location.href = "/recording";
+            }else if(result == "2"){
+                alert("密码错误");
+            }else if(result == "-1"){
+                alert("没有该用户");
+            }else if(result == "-3"){
+                alert("服务器错误！");
+            }else{
+                alert("未知原因，登陆失败");
+            }
+        });
+    });
+</script>
+</body>
+</html>

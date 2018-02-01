@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>关于我</title>
+    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <!--//Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="sminocence" />
+</head>
+<body>
+<!-- header -->
+<div class="col-md-2 sidebar">
+    <div class="sidebar_top">
+        <h1><a href="/">sminocence></a></h1>
+    </div>
+    <div class="top-navigation">
+        <div class="t-menu">菜单</div>
+
+        <div class="t-img">
+            <img src="../images/lines.png" alt="" />
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <div class="drop-navigation">
+        <div class="top-menu">
+
+            <ul>
+                <li class="/"><a href="/">主页</a></li>
+                <li><a href="/JavaScript">JavaScript</a></li>
+                <li><a href="/NodeJS">NodeJS</a></li>
+                <li><a href="/Environment">环境搭建</a></li>
+                <li><a href="/About">关于我</a></li>
+                <li><a href="/comment">留言</a></li>
+            </ul>
+        </div>
+        <!-- script-for-menu -->
+        <script>
+            $( ".top-navigation" ).click(function() {
+                $( ".drop-navigation" ).slideToggle( 300, function() {
+                    // Animation complete.
+                });
+            });
+        </script>
+
+        <div class="side-btm">
+            <div class="copyright">
+                <p>Design by sminocence</p>
+                <p>Copyright &copy; 2017.sminocence All rights reserved.</p>
+                <p><a href="#">粤ICP备16097955号-1</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-10 col-sm-offset-3 col-md-10 col-md-offset-2">
+    <div class="news">
+        <div class="news-sec">
+            <div class="news-top">
+                <div class="col-md-12 news-1">
+                    <a href="javascript:;"><h5>关于我</h5></a>
+                    <div class="blog-body">
+                        <div class="blog-content">
+                            <h2><strong><span style="font-family: 'Microsoft YaHei'; font-size: 18px;">个人简介：</span></strong></h2>
+                            <p>大家好，我是肖茜，笑嘻嘻。我是重庆邮电大学信管专业的一名大三本科学生。描述我的三个词语：爱笑、好奇、勤奋。第一，爱笑，我个人是比较喜欢笑的一个人，在平时生活中，与人相处中，都是比较乐观开朗的；第二，好奇，我加入极客网工作室一年多了，在这里，我认识了很多很好的学长学姐。有他们给我做指导，我自己对前端的新事物比较感兴趣，会常常逛技术论坛、博客园、CSDN等等；第三，勤奋，我是一个比较爱学习的人，在生活中经常帮助同学和老师做事，每天给自己定个小目标，计划去完成它。嘿嘿</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+</body>
+</html>
