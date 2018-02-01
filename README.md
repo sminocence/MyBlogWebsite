@@ -24,8 +24,11 @@
 解决：将用户的注册信息存入数据库，我之前一直以为是md5加密部分错了，可是我在前端将$.post方法换成了$.ajax方法。通过对input标签
 name属性，然后在后端用req.body.name的名称获取输入框的内容，然后用加密的算法，也能将密码进行加密，我初步猜测是form表单获取内容的错误。
 我最后检查是因为在写路由的时候，路径前面少写了“/”.要特别注意路径的书写。
+
 - 关于前端用jQuery处理Ajax请求，后端解析数据的方法,这次项目中我用到了这两种
+
 1.使用req.body.inputName来处理数据，这个需要body-parser模块
+
 2.使用formidable模块的parse方法
 ```
     var form = new formidable.IncomingForm();
